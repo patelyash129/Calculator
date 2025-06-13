@@ -1,5 +1,11 @@
 window.onload = function () {
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+    function toggleMenu() {
+    const nav = document.getElementById("myNavbar");
+    nav.classList.toggle("responsive");
+  }
+// For Firebase JS SDK v7.20.
+// 0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDzjp2D_aFfTN0CrHuxBD67hVmmKVR-MKU",
   authDomain: "calculator-3cb5e.firebaseapp.com",

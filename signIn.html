@@ -1,21 +1,61 @@
 <!DOCTYPE html>
-<html>
+<body>
 <head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/style.css">
 <title>Calculator</title>
 <style>
     td{
-        width: 125px;
-        height: 75px;
+        width: auto;
+        height: auto;
+    }
+       .header-inline {
+      display: flex;
+      align-items: center;
+      padding: 0px;
+    }
+    .header-inline img {
+      height: 60px;
+      width: 100px;
+      margin-right: 0px;
+    }
+    .header-inline h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
     }
 </style>
 </head>
-<body bgcolor="#7DF9FF">
+</body>
+<div class="header-inline">
+  <img src="https://tse1.mm.bing.net/th/id/OIP.hSu30guaAwidNM1fWeUhuwAAAA?rs=1&pid=ImgDetMain" alt="unable to load">
+  <h2>Calculator With Easiness</h2>
+</div><center>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">Calculator</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<center>
-    <center><h1>Calculator</h1></center>
-    <table border="2" height="500px" width="500px">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Calculator</a>
+      </li>
+
+    </ul>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+  </div>
+</nav>
+
+    <table border="2" height="400px" width="400px" style="margin-top: 30px;">
         <tr>
-            <td colspan="4" style="padding-top:8px; padding-bottom:0%; height: 100px;"><center><input type="text" name="text"  id="name"  style="border-radius: 10px;text-align: right;font-size: 28px;width: 420px; height: 50px; padding-top: 0px;padding-right:10px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px" value="0"></center></td>
+            <td colspan="4" style="padding:auto; padding-bottom:0%; height: auto;"><center><input type="text" name="text"  id="name"  style="border-radius: 10px;text-align: right;font-size: 28px;width: auto; height: auto; padding-top: 0px;padding-right:10px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px" value="0"></center></td>
         </tr>
          <tr>
             <td onclick="number(7)"><center>x</center></td>
