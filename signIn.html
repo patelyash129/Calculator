@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<style>
+    td{
+        width: 125px;
+        height: 75px;
+    }
+</style>
+</head>
+<body bgcolor="#7DF9FF">
+
+<center>
+    <center><h1>Calculator</h1></center>
+    <table border="2" height="500px" width="500px">
+        <tr>
+            <td colspan="4" style="padding-top:8px; padding-bottom:0%; height: 100px;"><center><input type="text" name="text"  id="name"  style="border-radius: 10px;text-align: right;font-size: 28px;width: 420px; height: 50px; padding-top: 0px;padding-right:10px; padding-bottom: 0px; margin-top: 0px; margin-bottom: 0px" value="0"></center></td>
+        </tr>
+         <tr>
+            <td onclick="number(7)"><center>x</center></td>
+            <td onclick="square()"><center>sq</center></td>
+            <td onclick="number(9)"><center>%</center></td>
+            <td onclick="Clear()"><center>C</center></td>
+        </tr>
+        <tr>
+            <td onclick="number(7)"><center>7</center></td>
+            <td onclick="number(8)"><center>8</center></td>
+            <td onclick="number(9)"><center>9</center></td>
+            <td onclick="operation('/')"><center>/</center></td>
+        </tr>
+         <tr>
+            <td onclick="number(4)"><center>4</center></td>
+            <td onclick="number(5)"><center>5</center></td>
+            <td onclick="number(6)"><center>6</center></td>
+            <td onclick="operation('*')"><center>*</center></td>
+        </tr>
+         <tr>
+            <td onclick="number(1)"><center>1</center></td>
+            <td onclick="number(2)"><center>2</center></td>
+            <td onclick="number(3)"><center>3</center></td>
+            <td onclick="operation('-')"><center>-</center></td>
+        </tr>
+        <tr>
+            <td onclick="number(0)"><center>0</center></td>
+            <td onclick="number('.')"><center>.</center></td>
+            <td onclick="operation('=')"><center>=</center></td>
+            <td onclick="operation('+')"><center>+</center></td>
+        </tr>
+    
+    </table>
+</center>
+<script>
+     var op;
+        let m,n,result=0;
+    function Clear(){
+        op='';
+        m=0;
+        n=0;
+        result=0;
+        document.getElementById('name').value=result;
+    }
+    function number(x){
+        k=document.getElementById("name").value;
+        if(k=='0')
+        {
+            document.getElementById("name").value=x;
+            console.log(x);
+        }
+        else{
+            document.getElementById("name").value=k+x;
+            console.log(x);
+        }
+       
+    }
+    function operation(y)
+    {
+        switch(y)
+        {
+        case '/':  m=document.getElementById("name").value;
+                    op=y;
+                    document.getElementById("name").value="";
+                    console.log(op);
+                    break;
+        case '+':  m=document.getElementById("name").value;
+                    op=y;
+                    document.getElementById("name").value="";
+                    console.log(m);
+                    break;
+        case '-':  m=document.getElementById("name").value;
+                    op=y;
+                    document.getElementById("name").value="";
+                    console.log(m);
+                    break;
+        case '*':  m=document.getElementById("name").value;
+                    op=y;
+                    document.getElementById("name").value="";
+                    console.log(m);
+                    break;
+        case '=':   n=document.getElementById("name").value;
+                     console.log(op);
+                    if(op=='/')
+                    {
+                        result=Number(m)/Number(n);
+                        document.getElementById("name").value=result;
+                        op="";
+                    }
+                    else if(op=='+')
+                    {
+                        result=Number(m)+Number(n);
+                        document.getElementById("name").value=result;
+                        op="";
+                    }
+                    else if(op=='-')
+                    {
+                        result=Number(m)-Number(n);
+                        document.getElementById("name").value=result;
+                        op="";
+                    }
+                    else if(op=='*')
+                    {
+                        result=Number(m)*Number(n);
+                        document.getElementById("name").value=result;
+                        op="";
+                    }
+                    else{
+                        console.log("something is incorrect");
+                    }
+                    console.log(op);
+                    break;
+        default : console.log("invalid operation");
+                    break;
+        } 
+
+       
+    }
+     function square(){
+            y=document.getElementById("name").value;
+            document.getElementById("name").value=y*y;
+        }
+</script>
+</body>
+</html>
