@@ -49,7 +49,7 @@
       </li>
 
     </ul>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
   </div>
 </nav>
 
@@ -178,6 +178,10 @@
             y=document.getElementById("name").value;
             document.getElementById("name").value=y*y;
         }
+
+    function logout(){
+      window.location.href="index.html";
+    }
 </script>
 </body>
 </html>
